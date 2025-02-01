@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background: linear-gradient(to right,rgb(43, 2, 62),rgb(35, 2, 2));
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: "Syne", serif;
+}
+.container{
+    width: 400px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+.first-part{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(170, 20, 45);
+    border-radius: 30px;
+}
+.first-part h1{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.image img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid white;
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 50%; transform: translateX(-50%); 
+    z-index: 3;
+}
+.second-part{
+    width: 100%;
+    height: 350px;
+    background-color: white;
+    border-radius: 30px;
+    margin-top: -130px;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+.second-part .text{
+    margin-top: 80px;
+    text-align: center;
+    padding: 5px 0;
+}
+.second-part .text h1{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.second-part .text h3{
+    font-size: 15px;
+    padding-bottom: 6px;
+}
+.second-part .text .line{
+    width: 300px;
+    height: 2px;
+    margin: auto;
+    background-color: rgb(170, 20, 45);
+}
+.second-part .text .bio{
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.second-part .text2{
+    padding: 20px 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.second-part .icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.second-part .icon-box{
+    padding: 5px;
+    background-color: rgb(170, 20, 45);
+    border-radius: 100%;
+}
+.second-part .icon-box:hover{
+    background-color: #861000;
+    transition-duration: 1s;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .container{
+        padding: 10px 20px;
+        width: 360px;
+    }
+    .second-part{
+        height: 420px;
+    }
+    .second-part .text .line{
+        width: 250px;
+    }
+    .second-part .text2{
+        padding: 10px 0 0 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   .container{
+        width: 600px;
+        margin-top: 150px;
+   }
+   .first-part{
+        height: 400px;
+   }
+   .second-part{
+    height: 500px;
+   }
+   .image img{
+    top: 140px;
+    left: 50%; transform: translateX(-50%); 
+    width: 200px;
+    height: 200px;
+   }
+   .second-part .text{
+    padding: 20px 0;
+   }
+   .second-part .text h1{
+        font-size: 30px;
+        padding-bottom: 10px;
+   }
+   .second-part .text h3{
+    font-size: 20px;
+   }
+   .second-part .text .line{
+    margin-bottom: 10px;
+   }
+   .second-part .text .bio{
+    font-size: 20px;
+   }
+   .second-part .text2{
+    font-size: 20px;
+   }
+   .second-part .icon-box{
+    padding: 10px;
+   }
+  }
